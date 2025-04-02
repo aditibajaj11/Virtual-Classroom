@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://jakarta.ee/xml/ns/jakartaee" version="5.0">
+    
+    <!-- Define Servlet -->
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.virtualclassroom.Main</servlet-class>  
+    </servlet>
+
+    <!-- Map Servlet URL -->
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome Page -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- JSP Page Mappings -->
+    <servlet>
+        <servlet-name>JSPServlet</servlet-name>
+        <jsp-file>/admin_dashboard.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JSPServlet</servlet-name>
+        <url-pattern>/admin_dashboard.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminLogin</servlet-name>
+        <jsp-file>/admin_login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLogin</servlet-name>
+        <url-pattern>/admin_login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminStudentRequests</servlet-name>
+        <jsp-file>/admin_student_requests.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminStudentRequests</servlet-name>
+        <url-pattern>/admin_student_requests.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FacultyLogin</servlet-name>
+        <jsp-file>/faculty_login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FacultyLogin</servlet-name>
+        <url-pattern>/faculty_login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StudentLogin</servlet-name>
+        <jsp-file>/student_login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentLogin</servlet-name>
+        <url-pattern>/student_login.jsp</url-pattern>
+    </servlet-mapping>
+</web-app>
