@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://jakarta.ee/xml/ns/jakartaee" version="5.0">
-    
+
     <!-- Define Servlet -->
     <servlet>
         <servlet-name>MainServlet</servlet-name>
-        <servlet-class>com.virtualclassroom.Main</servlet-class>  
+        <servlet-class>com.virtualclassroom.Main</servlet-class>
     </servlet>
-
-    <!-- Map Servlet URL -->
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <!-- AdminDashboardServlet mapping -->
+    <servlet>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <servlet-class>jakarta.AdminDashboardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminDashboardServlet</servlet-name>
+        <url-pattern>/adminDashboard</url-pattern>
     </servlet-mapping>
 
     <!-- Welcome Page -->
@@ -63,4 +71,5 @@
         <servlet-name>StudentLogin</servlet-name>
         <url-pattern>/student_login.jsp</url-pattern>
     </servlet-mapping>
+
 </web-app>
